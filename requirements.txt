@@ -1,0 +1,2 @@
+# MixMaster v2 uses the Python standard library and Pillow for image export.
+Pillow>=10.0.0
