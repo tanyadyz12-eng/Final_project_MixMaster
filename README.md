@@ -2,8 +2,7 @@ MixMaster v2: Cocktail Recipe Assistant with CLI, GUI, and PNG Card Export
 
 Authors: Yizhe Ding & Zhihan Liu
 
-MixMaster v2 is a Python-based cocktail exploration and recipe-generation system that models elements of a bartender’s decision-making workflow.
-It provides both command-line and graphical user interfaces, a JSON-backed recipe database, a template-driven recipe generator, and functionality for exporting cocktail cards as PNG images.
+MixMaster v2 is a Python-based cocktail exploration and recipe-generation system that models elements of a bartender’s decision-making workflow. It provides both command-line and graphical user interfaces, a JSON-backed recipe database, a template-driven recipe generator, and functionality for exporting cocktail cards as PNG images.
 
 This project was developed as the final project for EN.540.635 – Software Carpentry (Fall 2025).
 
@@ -62,12 +61,11 @@ mixmaster_v2/
   README.md
 
 
-Note:
-data/cocktails.json must be present for both the CLI and GUI to function correctly.
+Note: data/cocktails.json must be present for both the CLI and GUI to function correctly.
 
 Installation
 
-Install Python 3.10+.
+Install Python 3.10 or higher.
 
 Download or clone the repository.
 
@@ -78,11 +76,11 @@ Install dependencies:
 pip install -r requirements.txt
 
 
-Pillow will install automatically. Tkinter is included by default in most macOS and Linux Python distributions.
+Pillow will be installed automatically. Tkinter is included by default in most macOS and Linux Python distributions.
 
 Using the Command-Line Interface (CLI)
 
-From the project root:
+From the project root directory:
 
 python run.py
 
@@ -144,15 +142,11 @@ Image rendering (smoke tests for card creation)
 
 Collaboration Statement
 
-This project was completed jointly by Yizhe Ding and Zhihan Liu.
-Both contributors participated equally in software design, implementation, testing, and documentation.
-Development was coordinated through GitHub with balanced commit activity and shared responsibility for all technical components.
+This project was completed jointly by Yizhe Ding and Zhihan Liu. Both contributors participated equally in software design, implementation, testing, and documentation. Development was coordinated through GitHub with balanced commit activity and shared responsibility for all technical components.
 
 Academic Integrity
 
-All code in this repository is original unless explicitly cited within the source.
-No external code was reused without attribution.
-Only standard Python libraries and Pillow are used in accordance with course policy.
+All code in this repository is original unless explicitly cited within the source. No external code was reused without attribution. Only standard Python libraries and Pillow are used in accordance with course policy.
 
 Notes for Reviewers and Instructors
 
@@ -168,7 +162,7 @@ Dynamic PNG card generation using Pillow
 
 An interactive command-line interface
 
-A modular template-driven recipe creation engine
+A modular, template-driven recipe creation engine
 
 A documented suite of automated tests
 
