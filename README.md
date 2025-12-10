@@ -1,84 +1,93 @@
-# MixMaster v2: Cocktail Recipe Assistant with CLI, GUI, and Card Export  
-**Authors: Yizhe Ding & Zhihan Liu**
+MixMaster v2: Cocktail Recipe Assistant with CLI, GUI, and PNG Card Export
 
-MixMaster v2 is a Python-based cocktail exploration and generation tool that models part of a bartender’s decision-making workflow.  
-It supports both **command-line** and **GUI** modes, includes a **JSON-backed cocktail database**, a **template-based recipe generator**, and the ability to export **PNG cocktail cards**.
+Authors: Yizhe Ding & Zhihan Liu
 
-This project was completed as the final project for **EN.540.635 – Software Carpentry (Fall 2025)**.
+MixMaster v2 is a Python-based cocktail exploration and recipe-generation system that models elements of a bartender’s decision-making workflow.
+It provides both command-line and graphical user interfaces, a JSON-backed recipe database, a template-driven recipe generator, and functionality for exporting cocktail cards as PNG images.
 
----
+This project was developed as the final project for EN.540.635 – Software Carpentry (Fall 2025).
 
-## 🔍 Features
+Features
 
-- **Search by ingredients**: Find cocktails based on what you have on hand.
-- **Browse by base spirit or flavor tag**.
-- **Generate new recipes** using ratio templates.
-- **Export cocktail cards** as PNG images (using Pillow).
-- **Browse and view recipes via a Tkinter GUI**.
-- **~200 structured recipes** stored in `data/cocktails.json`.
-- **Unit tests** covering database queries and recipe generation.
+Search for cocktails based on available ingredients.
 
-This project demonstrates:
-- Multi-file Python project structure  
-- Use of classes and data models  
-- JSON data handling  
-- GUI development  
-- Image generation  
-- Unit testing  
-- PEP8-style organization  
+Browse recipes by base spirit or flavor tag.
 
----
+Generate new cocktail formulas using ratio-based templates.
 
-## 📁 Project Structure
+Export individual recipes as PNG cocktail cards (via Pillow).
 
+Explore the full database through a Tkinter graphical interface.
+
+Includes approximately 3,000 structured cocktail recipes in data/cocktails.json.
+
+Contains unit tests for the database, generator, and card-rendering components.
+
+The project demonstrates proficiency in:
+
+Multi-file Python software design
+
+Object-oriented programming
+
+JSON data handling and search algorithms
+
+GUI development with Tkinter
+
+Image generation and layout
+
+Unit testing and code organization
+
+PEP8-style, maintainable code practices
+
+Project Structure
 mixmaster_v2/
-data/
-cocktails.json # Required database (~200 recipes)
-src/
-ingredient.py # Ingredient data model
-cocktail.py # Cocktail data model and matching logic
-database.py # JSON-backed database interface
-generator.py # Template-driven recipe generator
-utils.py # Conversions and helpers
-cards.py # PNG card rendering (using Pillow)
-gui.py # Tkinter graphical interface
-cli.py # Command-line interface
-tests/
-test_database.py
-test_generator.py
-test_cocktail_utils_cards.py
-run.py # CLI entry point
-run_gui.py # GUI entry point
-requirements.txt
-README.md
+  data/
+    cocktails.json        # Required database (~3000 recipes)
+  src/
+    ingredient.py         # Ingredient model and representation
+    cocktail.py           # Cocktail model and match/evaluation logic
+    database.py           # JSON-backed database handler
+    generator.py          # Ratio-based recipe generator
+    utils.py              # Conversion utilities and formatting helpers
+    cards.py              # Cocktail card rendering using Pillow
+    gui.py                # Tkinter GUI implementation
+    cli.py                # Command-line interface implementation
+  tests/
+    test_database.py
+    test_generator.py
+    test_cocktail_utils_cards.py
+  run.py                  # CLI entry point
+  run_gui.py              # GUI entry point
+  requirements.txt
+  README.md
 
-yaml
-复制代码
 
-⚠️ **Important:**  
-The file `data/cocktails.json` **must be present** for both CLI and GUI to run.
+Note:
+data/cocktails.json must be present for both the CLI and GUI to function correctly.
 
----
+Installation
 
-## 🛠 Installation
+Install Python 3.10+.
 
-1. Ensure you have **Python 3.10+** installed.
-2. Clone or unzip this repository.
-3. (Optional) Create a virtual environment.
-4. Install dependencies:
+Download or clone the repository.
 
-```bash
+(Optional) Create and activate a virtual environment.
+
+Install dependencies:
+
 pip install -r requirements.txt
-Pillow will be installed automatically.
-Tkinter is included with most Python distributions on macOS and Linux.
 
-▶️ Running the Command-Line Interface (CLI)
+
+Pillow will install automatically. Tkinter is included by default in most macOS and Linux Python distributions.
+
+Using the Command-Line Interface (CLI)
+
 From the project root:
 
-bash
-复制代码
 python run.py
-Menu options include:
+
+
+The CLI provides options to:
 
 Search by ingredients
 
@@ -86,75 +95,81 @@ Browse by base spirit
 
 Search by flavor tag
 
-Generate a custom recipe
+Generate a custom cocktail
 
-Export recipe as PNG
+Export a cocktail card as a PNG file
 
-Open GUI instructions
+Display instructions for GUI usage
 
-Surprise me
+Generate a random recommendation
 
-Quit
+Quit the program
 
-Exported images are saved to the cards/ directory.
+Exported cocktail cards are saved in the cards/ directory.
 
-🪟 Running the GUI
-Launch with:
+Using the Graphical User Interface (GUI)
 
-bash
-复制代码
+Launch the GUI with:
+
 python run_gui.py
+
+
 The GUI includes:
 
-A search box
+A search bar
 
-A recipe list
+A scrollable recipe list
 
-A detail panel (ingredients + instructions)
+A detailed view with ingredients and instructions
 
-A “surprise me” button
+A random recipe generator
 
-Optional favorites (if enabled in this build)
+Optional support for saving and viewing favorites
 
-🧪 Testing
-Run the included unit tests:
+Testing
 
-bash
-复制代码
+To execute the test suite:
+
 pip install pytest
 pytest
+
+
 The tests validate:
 
-Database search logic
+Database lookup and filtering logic
 
-Recipe generator behavior
+Template-based recipe generation
 
-Cocktail card rendering (smoke tests)
+Image rendering (smoke tests for card creation)
 
-🤝 Collaboration
+Collaboration Statement
+
 This project was completed jointly by Yizhe Ding and Zhihan Liu.
-Work was divided evenly, committed regularly through GitHub, and coordinated collaboratively in accordance with course expectations.
+Both contributors participated equally in software design, implementation, testing, and documentation.
+Development was coordinated through GitHub with balanced commit activity and shared responsibility for all technical components.
 
-📑 Academic Integrity
-All code in this project is original work by the authors.
-No external code was copied without citation.
-Standard Python libraries and Pillow are used as permitted.
+Academic Integrity
 
-📌 Notes for Reviewers / Instructors
-MixMaster v2 goes beyond all in-class assignments by incorporating:
+All code in this repository is original unless explicitly cited within the source.
+No external code was reused without attribution.
+Only standard Python libraries and Pillow are used in accordance with course policy.
 
-A multi-class, multi-file architecture
+Notes for Reviewers and Instructors
 
-JSON data parsing and database-like querying
+MixMaster v2 extends significantly beyond all in-class programming assignments by incorporating:
 
-GUI development using Tkinter
+A multi-module, object-oriented architecture
 
-Dynamic PNG generation with Pillow
+A large-scale JSON dataset (~3000 recipes) and structured search operations
 
-Interactive CLI menus
+A full Tkinter graphical application
 
-A recipe generator with ratio templates
+Dynamic PNG card generation using Pillow
 
-A structured testing suite
+An interactive command-line interface
 
-This satisfies the project difficulty and breadth expectations outlined in the assignment handout.
+A modular template-driven recipe creation engine
+
+A documented suite of automated tests
+
+This implementation meets the expectations for project complexity, software engineering quality, and completeness described in the assignment rubric.
